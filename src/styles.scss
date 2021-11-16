@@ -1,0 +1,286 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons');
+
+html {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+h1.is-bold,
+h2.is-bold {
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+  max-width: 600px ;
+    margin: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    
+    padding: 12px 22px;
+    background: rgba(black, 0.7);
+
+    text-decoration: none;
+    
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+    font-family: inherit;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(black, 0.78);
+        backdrop-filter: blur(2px);
+    }
+
+    &:active {
+        background: rgba(black, 0.85);
+    }
+
+}
+
+.btns-container {
+    display: flex;
+    gap: 12px;
+    
+    margin-top: 20px;
+
+    &.btns-centered {
+        justify-content: center;
+    }
+
+    .align-end {
+        margin-left: auto;
+    }
+}
+
+.has-blurred-white-bg {
+    background: rgba(white, 0.35);
+    backdrop-filter: blur(20px);
+}
+
+.form-field {
+    margin-bottom: 10px;
+
+    label.form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: rgba(black, 0.8);
+    }
+}
+
+.textbox,
+.textarea {
+    display: block;
+    
+    font-size: 18px;
+    font-family: inherit;
+
+    border: 2px solid rgba(black, 0.3);
+    border-radius: 4px;
+    
+    background-color: rgba(white, 0.9);
+    
+    padding: 8px 10px;
+    
+    width: 100%;
+
+    &:hover {
+        background: rgba(white, 0.95);
+    }
+
+    &:focus {
+        background: white;
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: rgba(black, 0.42);
+    }
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+//////////////////////////////////////
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ffbdde;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #c9b0f5;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #f7ab98;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #fa7ce9;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
