@@ -4,21 +4,21 @@
 
 .bookmark-tiles-container {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
 
     flex-wrap: wrap;
 }
 
 .btn{
-    padding: 10px;
+    padding: .625rem;
 }
 .add-btn i {
-    margin-right: 3px;
-    margin-left: -3px;
+    margin-right: .1875rem;
+    margin-left: -0.1875rem;
 }
 
 .manage-btn i {
-    margin-right: 6px;
+    margin-right: .375rem;
     opacity: 0.9;
 }
